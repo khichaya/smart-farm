@@ -1,0 +1,22 @@
+# ===== أسرار - لا تُرفع أبداً =====
+firmware/farm_sensors/secrets.h
+platform/config.json
+
+# ===== بيانات المزرعة والذكاء الاصطناعي =====
+*.db
+*.db-journal
+platform/ai/data/
+
+# ===== أدوات ضخمة تُنزَّل تلقائياً (arduino-cli وحزمة ESP8266) =====
+tools/
+
+# ===== متفرقات =====
+__pycache__/
+*.pyc
+*.log
+*.err
+platform/server.log
+platform/server.err
+farmtest/
+.claude/
+Thumbs.db

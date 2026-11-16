@@ -1,0 +1,11 @@
+{
+  "name": "المزرعة الذكية",
+  "short_name": "المزرعة",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f6ef",
+  "theme_color": "#1f5e2e",
+  "icons": []
+}

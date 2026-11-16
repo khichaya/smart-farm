@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14532d">
+<meta name="author" content="المهندس خيشة يحي">
+<meta name="copyright" content="جميع الحقوق محفوظة - المهندس خيشة يحي - نسخة أكاديمية">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/cairo-arabic.woff2" as="font" type="font/woff2" crossorigin>
+<title>المزرعة الذكية</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div id="login" class="overlay hidden">
+  <form class="card login" onsubmit="return doLogin(event)">
+    <div class="logo" id="loginLogo"></div>
+    <h2>المزرعة الذكية</h2>
+    <p class="muted">أدخل رمز الدخول (PIN)</p>
+    <input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="••••••" required>
+    <button class="btn primary" type="submit" style="width:100%">دخول</button>
+    <div id="loginErr" class="err"></div>
+    <div class="muted" style="font-size:.78rem;margin-top:8px">جميع الحقوق محفوظة — المهندس خيشة يحي<br>نسخة أكاديمية</div>
+  </form>
+</div>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="brand">
+      <div class="logo" id="brandLogo"></div>
+      <div><h1>المزرعة الذكية</h1><div class="sub">تابع مزرعتك لحظة بلحظة</div></div>
+    </div>
+    <div class="status">
+      <button class="hbtn" id="guideBtn" onclick="location.hash='#/guide'" aria-label="شرح النظام" title="شرح النظام"></button>
+      <button class="hbtn" id="muteBtn" onclick="toggleMute()" aria-label="الصوت"></button>
+      <button class="hbtn" id="bell" onclick="openAlerts()" aria-label="سجل التنبيهات"></button>
+      <span id="conn" class="pill off"><i></i><span>غير متصل</span></span>
+      <span id="clock"></span>
+    </div>
+  </div>
+</header>
+
+<nav id="nav"><div class="in" id="navIn"></div></nav>
+<main id="view"></main>
+<footer class="foot">© <span id="yr"></span> جميع الحقوق محفوظة — المهندس خيشة يحي &nbsp;·&nbsp; نسخة أكاديمية</footer>
+
+<div id="modal" class="overlay hidden" onclick="if(event.target===this)closeModal()">
+  <div class="card modal" id="modalBody"></div>
+</div>
+<div id="toast"></div>
+
+<script src="app.js"></script>
+<script src="guide.js"></script>
+</body>
+</html>
